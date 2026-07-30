@@ -1,0 +1,378 @@
+/* =========================================================
+   ADMIN DASHBOARD
+========================================================= */
+
+.admin-messages {
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 8% 100px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(108, 99, 255, 0.10),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f8f9ff 0%,
+      #ffffff 50%,
+      #f5f3ff 100%
+    );
+}
+
+
+/* =========================================================
+   ADMIN CONTAINER
+========================================================= */
+
+.admin-container {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   DASHBOARD HEADING
+========================================================= */
+
+.admin-heading {
+  margin-bottom: 50px;
+}
+
+.admin-heading span {
+  display: inline-block;
+
+  padding: 8px 15px;
+
+  background: #f0efff;
+  color: #6c63ff;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+}
+
+.admin-heading h2 {
+  font-size: 48px;
+
+  color: #1f1f2e;
+
+  margin-bottom: 12px;
+}
+
+.admin-heading p {
+  color: #666675;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   MESSAGE GRID
+========================================================= */
+
+.messages-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+}
+
+
+/* =========================================================
+   MESSAGE CARD
+========================================================= */
+
+.message-card {
+  padding: 30px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid rgba(108, 99, 255, 0.08);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 12px 35px rgba(30, 25, 70, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.message-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(108, 99, 255, 0.20);
+
+  box-shadow:
+    0 20px 45px rgba(108, 99, 255, 0.12);
+}
+
+
+/* =========================================================
+   MESSAGE HEADER
+========================================================= */
+
+.message-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #eeeeF5;
+}
+
+.message-label {
+  display: block;
+
+  color: #6c63ff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 7px;
+}
+
+.message-header h3 {
+  font-size: 22px;
+
+  color: #222230;
+
+  margin: 0;
+}
+
+.message-date {
+  padding: 7px 10px;
+
+  background: #f8f7ff;
+
+  color: #777785;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   MESSAGE INFORMATION
+========================================================= */
+
+.message-info {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid #eeeeF5;
+}
+
+.message-info p {
+  margin: 0;
+
+  color: #666675;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  word-break: break-word;
+}
+
+.message-info strong {
+  display: inline-block;
+
+  color: #222230;
+
+  font-size: 13px;
+
+  margin-bottom: 4px;
+}
+
+
+/* =========================================================
+   MESSAGE BODY
+========================================================= */
+
+.message-body {
+  padding-top: 22px;
+}
+
+.message-body p {
+  margin: 0;
+
+  color: #555566;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  background: #fafaff;
+
+  padding: 18px;
+
+  border-radius: 12px;
+
+  border-left: 3px solid #6c63ff;
+}
+
+
+/* =========================================================
+   LOADING MESSAGE
+========================================================= */
+
+.loading-message {
+  padding: 40px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  color: #6c63ff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 10px 30px rgba(30, 25, 70, 0.06);
+}
+
+
+/* =========================================================
+   NO MESSAGE
+========================================================= */
+
+.no-message {
+  padding: 50px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  color: #777785;
+
+  font-size: 16px;
+
+  box-shadow:
+    0 10px 30px rgba(30, 25, 70, 0.06);
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.error-message {
+  padding: 20px;
+
+  background: #fff5f5;
+
+  color: #d64545;
+
+  border: 1px solid #ffd6d6;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .admin-messages {
+    padding: 110px 6% 80px;
+  }
+
+  .messages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-heading h2 {
+    font-size: 42px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .admin-messages {
+    padding: 100px 20px 60px;
+  }
+
+  .admin-heading {
+    margin-bottom: 35px;
+  }
+
+  .admin-heading h2 {
+    font-size: 34px;
+  }
+
+  .admin-heading p {
+    font-size: 14px;
+  }
+
+  .message-card {
+    padding: 22px;
+  }
+
+  .message-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .message-date {
+    align-self: flex-start;
+  }
+
+  .message-info {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .message-body p {
+    font-size: 14px;
+  }
+
+}

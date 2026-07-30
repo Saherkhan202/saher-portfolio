@@ -1,0 +1,321 @@
+/* =========================================================
+   GENERAL STYLES
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #222222;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  width: 100%;
+  height: 75px;
+  background: #ffffff;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #6c63ff;
+
+  white-space: nowrap;
+
+  transition: 0.3s ease;
+}
+
+.nav-logo:hover {
+  color: #554ee6;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: #333333;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #6c63ff;
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+========================================================= */
+
+.nav-profile {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+  padding: 3px;
+
+  background: #6c63ff;
+
+  display: block;
+
+  transition: 0.3s ease;
+}
+
+.nav-profile:hover {
+  transform: scale(1.05);
+}
+
+.nav-profile img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 2px solid #ffffff;
+}
+
+
+/* =========================================================
+   HAMBURGER BUTTON
+   Hidden on Desktop & Tablet
+========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  border: none;
+  background: transparent;
+
+  color: #6c63ff;
+
+  font-size: 28px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  padding: 5px;
+
+  transition: 0.3s ease;
+}
+
+.menu-toggle:hover {
+  color: #554ee6;
+}
+
+
+/* =========================================================
+   TABLET RESPONSIVE
+   Normal Menu Still Visible
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .nav-container {
+    width: 92%;
+  }
+
+  .nav-menu {
+    gap: 20px;
+  }
+
+  .nav-menu a {
+    font-size: 15px;
+  }
+
+  .nav-profile {
+    width: 44px;
+    height: 44px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+   Hamburger Menu Shows
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 70px;
+  }
+
+  .nav-container {
+    width: 90%;
+  }
+
+  .nav-logo {
+    font-size: 19px;
+  }
+
+
+  /* Show Hamburger */
+  .menu-toggle {
+    display: block;
+
+    margin-left: auto;
+    margin-right: 15px;
+  }
+
+
+  /* Hide Normal Menu Initially */
+  .nav-menu {
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0;
+
+    padding: 0;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition: all 0.3s ease;
+  }
+
+
+  /* Menu Open */
+  .nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+
+  /* Mobile Menu Links */
+  .nav-menu a {
+    width: 100%;
+
+    padding: 16px 20px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    border-bottom: 1px solid #eeeeee;
+  }
+
+
+  /* Mobile Profile */
+  .nav-profile {
+    width: 42px;
+    height: 42px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    height: 65px;
+  }
+
+  .nav-logo {
+    font-size: 17px;
+  }
+
+  .menu-toggle {
+    font-size: 25px;
+
+    margin-right: 10px;
+  }
+
+  .nav-profile {
+    width: 38px;
+    height: 38px;
+  }
+
+  .nav-menu {
+    top: 65px;
+  }
+
+  .nav-menu a {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
+}
