@@ -31,7 +31,7 @@ function Contact() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/messages",
+        "https://saher-portfolio-production.up.railway.app/api/messages",
         {
           method: "POST",
           headers: {
