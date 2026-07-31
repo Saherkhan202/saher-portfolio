@@ -50,6 +50,8 @@ function About() {
             <span>MySQL</span>
             <span>WordPress</span>
             <span>WooCommerce</span>
+            <span>Node JS</span>
+            <span>MongoDB</span>
           </div>
         </div>
 
